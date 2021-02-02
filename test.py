@@ -2,5 +2,5 @@ import assessment
 
 if __name__ == '__main__':
 	testTheater = assessment.Theater()
-	output = testTheater.seating("input.txt")
+	output = testTheater.seating("test1.txt")
 	print(output)

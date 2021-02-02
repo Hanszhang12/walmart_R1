@@ -41,7 +41,7 @@ For our assignSeats method, we should be returning a dictionary of request ID to
 
 However, this isn't very efficient. A better way to do this is to first sort the requests in descending order by the number of seats they are requesting and then assign them seats in that order. This would be better because it places the larger parties in the front and also maximizes the number of people we can seat in the theater. We can do this by using a max Heap. We do this by using the python minheap but inserting the values as negative values. 
 
-If the party is too big for any of the available rows, we would split the party up and see if it's possible to fit any of them in an available row.
+If the party is too big for any of the available rows, we would split the party up and see if it's possible to fit any of them in an available row. We would only do this if there's enough room for all of the members of the party. If we split them up and one part of the group doesn't have seating, we would cancel the reservation. 
 
 
 
