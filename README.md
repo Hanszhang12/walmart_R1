@@ -24,15 +24,19 @@ Create a README file that documents your assumptions and  includes instructions 
 ## Walmart - Movie Theater Seating Challenge 
 
 ## Guidelines
-10 rows x 20 seats, 200 seats in total. Buffer of 3 seats and/or one row is required. For customer satisfaction, we should put as many people in the front rows as possible while maintaining the other restriction. 
+10 rows x 20 seats, 200 seats in total. Buffer of 3 seats and one row is required. For customer satisfaction, we should put as many people in the front rows as possible while maintaining the other restriction. 
 
 ## Assumptions
-Let's make the assumption that the customers want to be seated closer with the screen. Each group must also be sitting on the same row. Let's also assume that we care more about customer satisfaction over customer safety. This means that we would do whatever is necessary to fit everyone into the movie theater. If there are more requested seats than there are movie theater seats, the whole movie theater should be full and the request that goes over the limit won't be received. 
+Let's make the assumption that the customers want to be seated closer with the screen. Each group must also be sitting on the same row. Groups that are together want to be seated right next to each other. We care most about our customer's safety so we should never break the guidelines. If necessary, we dont output the request if it goes over the capacity we are allowed to seat. However, we want to maximize the number of people in the theater. Because of this, some of the earlier request may be ommitted to accomodate for the later requests with more people. If a reservation doesn't go through, it will have a "N/A" next to its reservation ID in the output file.
 
 ## Implementation
-Use a 2D Array to represent the theater. Seats that are empty should be represented with a 0. Seats that are filled should be represented with a 1. 
+Use a 2D Array to represent the theater. Seats that are empty should be represented with a 0. Seats that are filled should be represented with their reservation identifier. Let's also initialize a dictionary that maps row numberIDs to their corresponding letter. This will make it easier for us later on when building up our output.
 
+The Theater class is used to implement the algorithm. This class will encapsulate the 2D array and will be responsible for coming up with the seating arrangement. Each Theater class will take in one file input and will have a seating method that comes up with the arrangement. It will also have a findAvailable method that will helping in finding which seats are available.
 
+The seating method is the function that takes in the file.txt input. It's responsible for parsing the data and mapping the reservation ID to the number of seats requested
+
+For our assignSeats method, we should be returning a dictionary of request ID to the corresponding seats assigned. 
 
 
 
