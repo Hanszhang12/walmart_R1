@@ -21,8 +21,24 @@ The solution and tests should build and execute entirely via the  command line.
 The command for executing the program should accept the  complete path to the input file as an argument and should  return the full path to the output file. 
 Create a README file that documents your assumptions and  includes instructions for building the solution and executing the  tests. 
 
-##
-Walmart - Movie Theater Seating Challenge 
+##Walmart - Movie Theater Seating Challenge 
 
-#10 rows x 20 seats, 200 seats in total 
-#Buffer of 3 seats and/or one row is required 
+##Guidelines
+10 rows x 20 seats, 200 seats in total. Buffer of 3 seats and/or one row is required. For customer satisfaction, we should put as many people in the front rows as possible while maintaining the other restriction. 
+
+##Assumptions
+Let's make the assumption that the customers want to be seated closer with the screen. Each group must also be sitting on the same row. Let's also assume that we care more about customer satisfaction over customer safety. This means that we would do whatever is necessary to fit everyone into the movie theater. If there are more requested seats than there are movie theater seats, the whole movie theater should be full and the request that goes over the limit won't be received. 
+
+##Implementation
+Use a 2D Array to represent the theater. Seats that are empty should be represented with a 0. Seats that are filled should be represented with a 1. 
+
+
+
+
+
+
+
+
+
+
+
