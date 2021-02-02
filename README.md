@@ -14,3 +14,7 @@ The command for executing the program should accept the  complete path to the in
 Create a README file that documents your assumptions and  includes instructions for building the solution and executing the  tests. 
 
 
+Walmart - Movie Theater Seating Challenge 
+
+#10 rows x 20 seats, 200 seats in total 
+#Buffer of 3 seats and/or one row is required 
